@@ -34,8 +34,7 @@ class Mapper:
                 m['experiences'].append(a)
             if type == 'com.linkedin.voyager.identity.shared.MiniProfile':
                 """ Get Images """
-                m['pictures'] = {'images': a['picture']['artifacts'], 'rootUrl': a['picture']['rootUrl'],
-                                 'backgroundimage': a['backgroundImage'], 'publicIdentifier': a['publicIdentifier']}
+                m['pictures'] = a
             if type == 'com.linkedin.voyager.identity.profile.Certification':
                 """ Get Certification """
                 m['certifications'].append(a)
