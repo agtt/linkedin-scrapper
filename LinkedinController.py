@@ -28,10 +28,10 @@ class LinkedinController(SeleniumHelper):
             self.mode = 'LOGGED'
             # self.login(config)
 
-    def login(self):
+    def login(self,username="karescrapper@gmail.com",password="Kare14531453"):
         self.loadPage("https://www.linkedin.com/login")
-        self.waitAndWrite("#username", "karescrapper@gmail.com")
-        self.submitForm(self.selectAndWrite("#password", "Kare14531453"))
+        self.waitAndWrite("#username", username)
+        self.submitForm(self.selectAndWrite("#password", password))
 
     def performClicks(self):
         self.clickSelector('#contact-info-tab')

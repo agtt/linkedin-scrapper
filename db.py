@@ -6,7 +6,7 @@ class db:
     def __init__(self, host='localhost', database='linkedin', user='root', password=''):
         try:
             self.connect = mysql.connector.connect(host=host, database=database, user=user, password=password)
-            print('Basarili')
+            print('MySQL connection successfliy')
         except Error as e:
             print("Error while connecting to MySQL", e)
 
