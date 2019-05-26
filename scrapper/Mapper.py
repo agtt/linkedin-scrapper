@@ -1,3 +1,7 @@
+from db import db
+import json
+db = db()
+
 class Mapper:
 
     def profileMapper(self, data):
@@ -48,4 +52,5 @@ class Mapper:
             if p['$type'] == 'com.linkedin.voyager.identity.shared.MiniProfile':
                 profiles.append({'firstname': p['firstName'], 'lastname': p['lastName'], 'occupation': p['occupation'],
                                  'publicIdentifier': p['publicIdentifier'], 'trackingId': p['trackingId']})
+                db.addprofile(p['publicIdentifier'], '')
         return profiles

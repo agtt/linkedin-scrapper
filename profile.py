@@ -6,7 +6,7 @@ from LinkedinController import LinkedinController
 def main(params):
     linkedin = LinkedinController(config=True, debug=True)
     linkedin.login()
-    linkedin.search('resul')
+    linkedin.search('murat')
     # profile = linkedin.profile("https://www.linkedin.com/in/agitt/")
     # print(json.dumps(profile))
 
