@@ -32,9 +32,8 @@ class db:
     def updateprofile(self, id, data):
         try:
             cursor = self.connect.cursor()
-            sql = "UPDATE scrappers set data='%s' is_fetch=1 where id ='%s'"
-            val = (data, id)
-            cursor.execute(sql, val)
+            sql = "UPDATE scrappers set data=%s ,is_fetch=1 where id =%s"
+            cursor.execute(sql,(data,id))
             cursor.close()
             self.connect.commit()
         except Exception as e:
