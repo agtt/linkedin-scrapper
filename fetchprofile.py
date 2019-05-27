@@ -8,7 +8,7 @@ from db import db
 db = db()
 linkedin = LinkedinController(config=True, debug=True)
 linkedin.login()
-profiles = db.query('SELECT * FROM `scrappers` ORDER BY `id` ASC limit 2')
+profiles = db.query('SELECT * FROM `scrappers` ORDER BY rand() limit 2')
 for profile in profiles:
     link = "https://www.linkedin.com/in/" + profile[1]
     print(link)
