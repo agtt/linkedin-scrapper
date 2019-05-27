@@ -15,7 +15,7 @@ for profile in profiles:
     try:
         data = linkedin.profile(link)
         db.updateprofile(profile[0], json.dumps(data))  # update safe data
-        time.sleep(2)
+        time.sleep(5)
         # Update Profile
     except Exception as e:
         print(str(e))
