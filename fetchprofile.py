@@ -14,7 +14,7 @@ for profile in profiles:
     print(link)
     try:
         data = linkedin.profile(link)
-        db.updateprofile(profile[0], data) #update safe data
+        db.updateprofile(profile[0], data)  # update safe data
         time.sleep(2)
         # Update Profile
     except Exception as e:
