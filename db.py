@@ -29,6 +29,18 @@ class db:
             print(str(e))
         return True
 
+    def updateprofile(self, id, data):
+        try:
+            cursor = self.connect.cursor()
+            sql = "UPDATE scrappers set data='%s' is_fetch=1 where id ='%s'"
+            val = (data, id)
+            cursor.execute(sql, val)
+            cursor.close()
+            self.connect.commit()
+        except Exception as e:
+            print(str(e))
+        return True
+
     def __del__(self):
         if self.connect.is_connected():
             self.connect.close()
